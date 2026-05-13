@@ -287,6 +287,25 @@
     <div class="note">
       juice-shop için Trivy <strong>0 bulgu</strong> — repoda lockfile yok, Trivy bağımlılık taraması yapamadı. Aqua, <code>package.json</code>'dan range-based çözümleme yaparak 79 CVE buldu. Bu, Aqua Enterprise'ın en büyük katma değer noktası: <strong>lockfile gerektirmeden</strong> tarama.
     </div>
+
+    <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+      <div style="background: var(--panel-2); border-radius: 8px; padding: 16px; border-left: 3px solid #38bdf8;">
+        <div style="font-weight: 600; color: #38bdf8; margin-bottom: 6px; font-size: 13px;">📚 Veri tabanı genişliği</div>
+        <div style="font-size: 13px; color: var(--text); line-height: 1.55;">Aqua daha geniş veri tabanı + advisory feed'i kullanıyor (<strong>NSWG</strong>, vendor advisory'ler, GHSA). Bu yüzden <strong>eski CVE'leri</strong> ve non-CVE bulguları yakalıyor.</div>
+      </div>
+      <div style="background: var(--panel-2); border-radius: 8px; padding: 16px; border-left: 3px solid #fbbf24;">
+        <div style="font-weight: 600; color: #fbbf24; margin-bottom: 6px; font-size: 13px;">🆕 Güncellik (yeni CVE)</div>
+        <div style="font-size: 13px; color: var(--text); line-height: 1.55;">Trivy daha güncel — bazı <strong>2025/2026 CVE'leri</strong> Aqua DB'sine henüz girmemiş olabilir ya da tarama tarihinden sonra eklenmiş (örn. thymeleaf-spring6 CRITICAL'ler).</div>
+      </div>
+      <div style="background: var(--panel-2); border-radius: 8px; padding: 16px; border-left: 3px solid #a78bfa;">
+        <div style="font-weight: 600; color: #a78bfa; margin-bottom: 6px; font-size: 13px;">⚖️ Severity scoring</div>
+        <div style="font-size: 13px; color: var(--text); line-height: 1.55;">Aqua genelde NVD CVSS'in üzerine <strong>kendi triage'ını</strong> koyuyor (8 CVE'de farklı skor); Trivy daha çok <strong>upstream advisory'ye sadık</strong>.</div>
+      </div>
+      <div style="background: var(--panel-2); border-radius: 8px; padding: 16px; border-left: 3px solid #22c55e;">
+        <div style="font-weight: 600; color: #22c55e; margin-bottom: 6px; font-size: 13px;">🎯 Triage zenginliği</div>
+        <div style="font-size: 13px; color: var(--text); line-height: 1.55;">Aqua'da <strong>EPSS + Direct/Transitive + Package Roots + Vendor Fix + Reachability</strong> alanları var. OSS Trivy'de bunlar yok — önceliklendirme için Aqua çok daha hızlı karar verdiriyor.</div>
+      </div>
+    </div>
   </div>
 
   <div class="charts">
